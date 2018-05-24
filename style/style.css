@@ -1,0 +1,326 @@
+body {
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	margin: auto;
+	width: 960px;
+	}
+
+.introduction {
+	color: #404040;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+h1,  h3 {
+	font-family: 'Libre Franklin', serif;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 28px;
+	
+}
+
+.no-bottom-margin {
+	margin-bottom: 0;
+}
+
+.no-top-margin {
+	margin-top: 0;
+}
+
+.margin-top {
+	margin-top: 20px;
+}
+
+.h2go {
+	color: grey;
+	text-align: center;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+.hXtooltip {
+	font-size: 18px;
+	margin : 0;
+	font-family: 'Libre Franklin';
+}
+
+li {
+	margin-top: 10px;
+}
+
+svg {
+	/*
+	border-style: dotted;
+	*/
+}
+
+.nonwhitewomen-text, .nonwhite-text, .women-text, .asian-text, .black-text, .latix-text, .others-text {
+	font-weight: bold;
+	color: white;
+}
+.women-text { background:#CFE1F5; }
+.nonwhitewomen-text { background:#C07BA0; }
+.nonwhite-text { background:#D9D1E6; }
+.asian-text { background:#a3301b; }
+.black-text { background:#282e6a; }
+.latix-text { background:#006838; }
+.others-text { background:#fbb040; }
+
+.header {
+	text-align: center;
+	padding: 25px;
+	
+}
+
+.niceLink {
+	background:lightgrey;
+	font-weight: bold;
+	text-decoration:none;
+	color: #404040;
+	padding: 5px 10px;
+}
+
+.niceSmallLink {
+	background:lightgrey;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration:none;
+	color: #404040;
+	padding: 2px 5px;
+}
+
+.niceLink:hover, .niceSmallLink:hover  {
+	background:#92278f;
+	color: white;
+}
+.niceLink:visited, .niceSmallLink:hover {text-decoration:none;}
+
+.introduction {
+	text-align: center;
+	padding: 25px;
+	padding-bottom: 5px;
+	background-color: #f2f2f2;
+}
+
+.content {
+	padding: 25px;
+	padding-top: 0;
+}
+
+.footer {
+	background-color: #f2f2f2;
+	padding: 25px;
+}
+
+.categoryLegend {
+	font-size: 17px;
+	fill: grey;
+	font-weight: bold;
+}
+
+.sectorLegend {
+	text-align: center;
+	font-size: 12px;
+	fill: grey;
+	font-weight: bold;
+}
+
+.ranking p {
+	margin-top: 2px;
+	margin-bottom: 10px;
+}
+
+.chartContainer {
+	margin-top: 20px;
+}
+
+.chart {
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top:0;
+  padding-left:0;
+}
+
+.chartCompany {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.chartEmployees {
+	font-size: 12px;
+	fill: darkgrey;
+}
+
+.chartRank {
+	font-size: 13px;
+	fill: grey;
+}
+
+.chartSector {
+	font-size: 12px;
+	fill: darkgrey;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+div.griditem {
+
+	/* 
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	
+	
+	*/
+	text-align: center;
+	width: 50%;
+
+}
+
+div.right {
+	/*
+	background-color: grey;
+	*/
+}
+
+div.left {
+	/*
+	background-color: lightgrey;
+	*/
+}
+
+div.seventy {
+	width: 65%;
+}
+
+div.thirty {
+	width: 35%;
+}
+
+hr.line{
+  margin: 50px auto;
+  width: 50%;
+  height: 2px;
+  background-color: lightgrey;
+  border: none; /*on supprime le style par défaut*/
+}
+
+hr.block{
+  margin: 0 0;
+  height: 0;
+  background-color: white;
+  border: none; /*on supprime le style par défaut*/
+}
+
+.tooltipScatter {
+	position: absolute;
+	/*
+	width: 200px;
+	height: 28px;
+	stroke: 1px;
+	*/
+	pointer-events: none;
+	font-size: 12px;
+	min-width: 80px;
+	height: auto;
+	background: none repeat scroll 0 0 #ffffff;
+	border: 1px solid grey;
+	padding: 14px;
+	text-align: center;
+}
+
+.tooltipRepresentation {
+	position: absolute;
+	pointer-events: none;
+	font-size: 12px;
+	min-width: 80px;
+	height: auto;
+	background: none repeat scroll 0 0 #ffffff;
+	border: 1px solid grey;
+	padding: 8px;
+	text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+	body {
+		width: auto;
+	}
+	
+	div.griditem {
+		width: 100%;
+	}
+
+}
+
+
+.axisWhite path{
+  stroke: white;
+}
+
+.axisWhite line{
+  stroke: lightgrey;
+} 
+
+.axisGrey line{
+  stroke: lightgrey;
+}
+
+.axisGrey path{
+  stroke: lightgrey;
+} 
+
+.axisGrey text{
+  fill: #bfbfbf;
+}  
+
+.scatterAxisLegend {
+	fill: #404040;
+	font-size: 15px;
+}
+
+.button {
+    background-color: grey; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 7px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.btn-animated { display: flex; justify-content: center; }
+
+.inline-button p {
+	display: inline-block;
+}
+
+.percLegend {
+	fill: grey;
+	font-size: 13px;
+}
+
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Judson' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Libre+Franklin:bold' rel='stylesheet'>
+
+	<script src="scripts/d3.min.js"></script>
+	
+	<script src="scripts/jquery-2.2.3.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!--
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.5/d3-legend.js"></script>
+    -->
+
+</head>
+
+<body>
+	<div class="header">
+		<h1> How diverse is your tech company ? </h1>
+		<h2> When we loose diversity on the way to tech and leadership teams, and the missing women of color </h2>
+		<p> <a class="niceLink" href="https://www.vizforsocialgood.com/join-a-project/2018/4/20/dear-tech-people">A #VizForSocialGood project, with Dear Tech People </a></p>	
+	</div>
+	
+	<div class="introduction">
+		
+		<a href="http://www.deartechpeople.com/">
+			<img src="img/deartechpeople2.png" alt="Dear Tech People" >
+		</a>
+		<br>
+		<h2> Perimeter & methodology </h2>
+		<p><ul>
+					<li>They chose <b>100 tech companies</b>, focusing on the "darlings" - the ones that repeatedly show up on top lists</li>
+			  		<li>analyzed <b>thousands of profiles pulled from online sources, such as LinkedIn</b>, and consolidated diversity numbers at a company level and for tech <i>(Software Engineer, Engineering Manager, Analytics ...)</i> and leadership roles <i>(CEO, CTO, CMO ...)</i></li>
+			  		<li>created <b>overall, technical and leadership rank</b> to better compare companies</li>
+		</ul></p>  
+		<p> <a class="niceLink" href="http://www.deartechpeople.com/methodology">Read more</a> <p>
+	</div>
+	
+	<div class="content">
+		<h2 class="h2go"> Get ready to explore this dataset ! </h2>
+		</br>
+		<div class="2-scatterOverview">
+			<h3> Companies of all size and sectors can be at the top or bottom of the ranking  </h3>
+			<div class="grid">
+				<div class="griditem left seventy">
+					<p> <b>Small to large companies spread all over the ranking</b> 
+					<br><i>(the bigger the circle, the larger the company)</i></p>
+					<svg id="scatterGlobal"> </svg>
+				</div>
+				<div class="griditem right thirty" >
+					<p> <b>How does it look for some most represented sectors ?</b> </p>
+					<div id="scatterMultiples"> </div>
+					<svg id="scatterTest"> </svg>
+					<svg id="scatterTest2"> </svg>	
+				</div>
+				<div class="margin-top">
+					<svg id="scatterTest3"> </svg>
+					<svg id="scatterTest4"> </svg>
+					<svg id="scatterTest5"> </svg>
+				</div>
+				<button class="button" style="background-color:grey;" id="btn-scatter-technical">Switch to technical rank</button>
+				<button class="button" style="background-color:grey;" id="btn-scatter-leadership">Switch to leadership rank</button>
+				<button class="button" style="background-color:grey;" id="btn-scatter">Back to overall rank</button>
+				<p> Changing a lot from a ranking to another you think ? We will dig more into that just after </p>
+			</div>
+		</div>
+		
+		<hr class="line">
+		
+		<div class="1-average">
+			<h3 class="no-bottom-margin"> What the average company diversity look like ? </h3>
+			<p class=".no-top-margin"> <i>based on the 100+ studied companies</i></p>
+			<div class="grid">
+				<div class="griditem left">
+					<p> Proportion of <mark class="asian-text">asian</mark>, <mark class="black-text">black</mark>, <mark class="latix-text">latix</mark>, <mark class="others-text">others</mark> </p>
+					<svg id="barrepresentationRace2"> </svg>
+				</div>
+				<div class="griditem right" >
+					<p> Proportion of <mark class="women-text">women</mark> </p>
+					<svg id="barrepresentationGender2"> </svg>
+				</div>
+			</div>
+			<p> <b>Compared to America Population demographics</b></p>
+			<div class="grid">
+				<div class="griditem left">
+					<svg id="barrepresentationRace1"> </svg>
+				</div>
+				<div class="griditem right" >
+					<svg id="barrepresentationGender1"> </svg>
+				</div>
+			</div>
+			<p> But this view have some limits looking at women of colors and representation across position.</p>
+		</div>
+		
+		<hr class="line">
+		
+		<div class="0-howToRead">
+			<h3> When we loose diversity on the way to tech and leadership teams, and the missing women of color</h3>
+			<p> What we don't clearly see here :
+				<ul>
+					<li><b>The double penalty of not being white AND a women</b> : what are the percentage of women of color in companies ?</li>
+			  		<li><b>Diversity in technical of leadership is usually less than overall</b> : how the diversity change across positions ?</li>
+				</ul> 
+			</p>
+			</br>
+			<p><b>Let's introduce a new representation to better visualize those two information</b>, with the average company data.</p>
+			<p> For each role and overall we compute the % of <mark class="nonwhite-text">non-white</mark> people <i>(asian, black, latinx, other)</i> relative to the role, <mark class="women-text">women</mark>, and <mark class="nonwhitewomen-text">women of color</mark> <i>(non white wowen)</i> to better see <b>their representation evolution across those positions</b></p>
+			<div class="grid">
+				<svg id="animated"> </svg>
+			</div>
+			</br>
+			<div class="btn-animated">
+				<button class="button" style="background-color:grey;" id="btn-animated">See animated explanation</button>
+			</div>
+			<p><i>To better visualize women of color and evolution across position, I did supress here the race details, refer to dear tech people website or data for more detail or race repartition</i></p>
+		</div>
+		
+		<hr class="line">
+		
+		<div class="ranking">
+			<h3> Explore the diversity ranking </h3>
+			<div class="">
+				<p> <b>Highlight</b> <p>
+			  	<button class="button" style="background-color:lightgrey;" id="btn-highlight-all">no highlight</button>
+			  	<button class="button" style="background-color:#D9D1E6;" id="btn-highlight-nonwhite"><b>Non white</b></button>
+			  	<button class="button" style="background-color:#CFE1F5;" id="btn-highlight-women"><b>Women</b></button>
+			  	<button class="button" style="background-color:#C07BA0;" id="btn-highlight-nonwhitewomen"><b>Women of colors</b></button>
+			</div>
+			
+			<div class="button-group sort-by-button-group">
+			  	<p> <b>Sort by </b><p> 
+			  	<button class="button" style="background-color:lightgrey;"data-sort-value="company">Name</button>
+			  	<button class="button is-checked" style="background-color:#b3b3b3;" data-sort-value="sector"><b>Sector</b></button>
+			  	<button class="button" style="background-color:#b3b3b3;" data-sort-value="employees"><b>Employee</b></button>
+			  	<button class="button" style="background-color:#b3b3b3;" data-sort-value="rank"><b>Rank</b></button>
+			  	<button class="button" style="background-color:#b3b3b3;" data-sort-value="tech_rank"><b>Tech rank</b></button>
+			  	<button class="button" style="background-color:#b3b3b3;" data-sort-value="leadership_rank"><b>Leadership rank</b></button>
+			  	<button class="button" style="background-color:#D9D1E6;" data-sort-value="nonwhite"><b>Non white</b></button>
+			  	<button class="button" style="background-color:#CFE1F5;" data-sort-value="women"><b>Women</b></button>
+			  	<button class="button" style="background-color:#C07BA0;" data-sort-value="womenofcolor"><b>Women of color</b></button>
+			</div>
+
+			<div class="inline-button button-group filters-button-group">
+				<p> <b>Interesting others insights </b><p> 
+				<button class="button is-checked" style="background-color:lightgrey;" data-filter="*">no filter</button>
+				<button class="button" data-filter=".nowomenleadership"><b>No women in leadership</b></button>
+				<button class="button" data-filter=".nowomencolorleadership"><b>No women of color in leadership</b></button>
+				<button class="button"  style="background-color:#8cd9b3;" data-filter=".morewomencolor"><b>More women of color in tech | leadership than overall</b></button>
+			</div>
+			
+		</div>	
+		<div class="chartContainer"></div>	
+
+	</div>
+	
+	<div class="footer">
+		<p>Project detail and data on <a class="niceSmallLink" href="https://www.vizforsocialgood.com/join-a-project/2018/4/20/dear-tech-people">Viz for Social Good website</a><p> 
+		<p>Made by <a class="niceSmallLink" href="https://emaulandi.github.io/">Edith Visualize</a> | <i> <a class="niceSmallLink" href="https://twitter.com/edithmaulandi">@edithmaulandi</a> </i></p>
+		<p>Code and aggregated data are available on <a class="niceSmallLink" href="">github</a>.
+		<p>With the help of <a class="niceSmallLink" href="https://isotope.metafizzy.co/sorting.html">Isotope.js</a> and <a class="niceSmallLink" href="https://flowingdata.com/2014/10/15/linked-small-multiples/">Flowing Data tutorial</a> about small multiples.</p>
+		<p>Inspired by <a class="niceSmallLink" href="http://czrt.by/projects/2018-02-poster-vdud/">this great poster project</a> of <a class="niceSmallLink" href="https://twitter.com/czaroot">Ihar Yanouski</a> for sector scatterplots </p>
+	</div>
+	
+	
+</body>
+	
+	<link rel="stylesheet" href="style/style.css">
+	
+	<script src="scripts/common.js">	</script>
+	<script src="scripts/loadData.js">	</script>
+	<script src="scripts/adaptableScatter.js">	</script>
+	<script src="scripts/repartitionChart.js">	</script>
+	<script src="scripts/barRepresentation.js">	</script>
+
+</html>
